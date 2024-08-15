@@ -1,0 +1,21 @@
+.page-width {
+    max-width: 1284px;
+    margin: 0 auto;
+    padding: 0 24px; 
+}
+
+
+
+
+/* Header Styling Starting  */
+.ar_header .header__menu-item span {
+    font-size: 16px;
+    font-weight: 500; 
+    line-height: normal;
+    font-family: Quantico, sans-serif;
+}
+.ar_header  .header__active-menu-item { 
+    text-decoration: none; 
+}
+
+ /* Header Styling End  */

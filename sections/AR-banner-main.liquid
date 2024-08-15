@@ -1,0 +1,257 @@
+<style>
+.ar_banner_main {
+    width: 100%;
+    height: 100%;
+}
+.ar_banner_main .banner_inner {
+
+}
+.ar_banner_main .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ar_banner_main .mobile_image{
+  display: none;
+}
+.ar_banner_main h2 {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 67px; 
+    margin: 0;
+    padding-bottom: 14px;
+}
+.ar_banner_main span.desc {
+    display: block;
+    padding-bottom: 30px;
+}
+.ar_banner_main span.desc,
+.ar_banner_main span.desc p{
+    margin: 0;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: normal;
+}
+.ar_banner_main a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 230px;
+  width: 100%;
+  height: 60px;
+  border-radius: 40px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+</style>
+{%  style  %} 
+#ar_banner_main-{{ section.id }} h2,
+#ar_banner_main-{{ section.id }} span.desc,
+#ar_banner_main-{{ section.id }} span.desc p {
+    color:{{ section.settings.font_color }};
+}
+#ar_banner_main-{{ section.id }} a.pramiry_btn {
+  color:{{ section.settings.btn_text_color }}; 
+  background-color:{{ section.settings.btn_bg_color }}; 
+}
+#ar_banner_main-{{ section.id }} {
+  background-color:{{ section.settings.bg_color }};
+  padding-top:{{ section.settings.desktop_padding_top }}px;
+  padding-bottom:{{ section.settings.desktop_padding_bottom }}px;
+  margin-top:{{ section.settings.desktop_margin_top }}px;
+  margin-bottom:{{ section.settings.desktop_margin_bottom }}px;
+}
+@media screen and (max-width: 991px) { 
+  #ar_banner_main-{{ section.id }} {
+    padding-top:{{ section.settings.mbl_padding_top }}px;
+    padding-bottom:{{ section.settings.mbl_padding_bottom }}px;
+    margin-top:{{ section.settings.mbl_margin_top }}px;
+    margin-bottom:{{ section.settings.mbl_margin_bottom }}px;
+  }
+}
+{% endstyle %}
+<section class="ar_banner_main" id="ar_banner_main-{{ section.id }}">
+    <div class="page-width">
+        <div class="banner_inner">
+            <div class="banner_content">
+                {% if section.settings.headline != blank %}
+                  <h2>{{ section.settings.headline }}</h2>
+              {% endif %}
+              {% if section.settings.desc != blank %}
+                  <span>{{ section.settings.desc }}</span>
+              {% endif %}
+              {% if section.settings.btn_text != blank %}
+                  <a href="{{ section.settings.btn_url }}" class="pramiry_btn">{{ section.settings.btn_text }}</a>
+              {% endif %}
+            </div>
+              {% if section.settings.image != blank %}
+              <div class="image">
+                  {% if section.settings.image != blank %}
+                  {{ section.settings.image| image_url: width: section.settings.image.width | image_tag: loading: 'lazy', class: 'dekstop_image' }}
+                  {% endif %}
+              </div>
+              {% endif %}
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "AR Banner Main",
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headine",
+        "default": "Elevate Your Spirit with Victory Scented Fragrances!"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description",
+        "default": "<p>Shop now and embrace the sweet smell of victory with Local Face. </p>"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type":"header",
+        "content":"Section Color Settings"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "BG Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "btn_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "btn_bg_color",
+        "label": "Button BG Color",
+        "default": "#000"
+      },
+      {
+        "type":"header",
+        "content":"Section Desktop Spacing"
+      }, 
+      {
+        "type": "range",
+        "id": "desktop_padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop_padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop_margin_top",
+        "min": 0,
+        "max": 200,
+        "step": 5, 
+        "unit": "px",
+        "label": "Margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop_margin_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      },
+      {
+        "type":"header",
+        "content":"Section Mobile Spacing"
+     }, 
+     {
+        "type": "range",
+        "id": "mbl_padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+     },
+     {
+        "type": "range",
+        "id": "mbl_padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+     },
+     {
+        "type": "range",
+        "id": "mbl_margin_top",
+        "min": 200,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Margin Top",
+        "default": 0
+     },
+     {
+        "type": "range",
+        "id": "mbl_margin_bottom",
+        "min": 200,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+     }
+    ],
+    "presets":[
+      {
+        "name":"AR Banner Main"
+      }
+    ]
+  }
+{% endschema %}
