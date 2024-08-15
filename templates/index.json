@@ -9,32 +9,9 @@
 */
 {
   "sections": {
-    "ar_hero_banner_AtnKnP": {
-      "type": "AR-Hero-Banner",
-      "settings": {
-        "headline": "Elevate Your Spirit with Victory Scented Fragrances!",
-        "desc": "<p>Shop now and embrace the sweet smell of victory with Local Face. <\/p>",
-        "btn_text": "Shop Now",
-        "btn_url": "",
-        "image": "shopify:\/\/shop_images\/ariekoprasethio_a_bottle_of_perfume_spray_super_realistic_4K_re_f44fec90-0d8e-4dc3-96f8-3f03da660dec_1_FFSB_1.png",
-        "bg_color": "#000000",
-        "font_color": "#ffffff",
-        "btn_text_color": "#ffffff",
-        "btn_bg_color": "#ab572d",
-        "hover_btn_text_color": "#AB572D",
-        "hover_btn_bg_color": "rgba(0,0,0,0)",
-        "desktop_padding_top": 60,
-        "desktop_padding_bottom": 60,
-        "desktop_margin_top": 0,
-        "desktop_margin_bottom": 0,
-        "mbl_padding_top": 30,
-        "mbl_padding_bottom": 30,
-        "mbl_margin_top": 0,
-        "mbl_margin_bottom": 0
-      }
-    },
     "featured_collection_J9GTY7": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
@@ -63,7 +40,6 @@
     }
   },
   "order": [
-    "ar_hero_banner_AtnKnP",
     "featured_collection_J9GTY7"
   ]
 }
