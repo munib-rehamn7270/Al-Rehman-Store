@@ -64,6 +64,10 @@
   color:{{ section.settings.btn_text_color }}; 
   background-color:{{ section.settings.btn_bg_color }}; 
 }
+#ar_banner_main-{{ section.id }} a.pramiry_btn:hover {
+  color:{{ section.settings.hover_btn_text_color }}; 
+  background-color:{{ section.settings.hover_btn_bg_color }};
+}
 #ar_banner_main-{{ section.id }} {
   background-color:{{ section.settings.bg_color }};
   padding-top:{{ section.settings.desktop_padding_top }}px;
@@ -163,6 +167,18 @@
         "id": "btn_bg_color",
         "label": "Button BG Color",
         "default": "#AB572D"
+      },
+      {
+        "type": "color",
+        "id": "hover_btn_text_color",
+        "label": "Hover Button Text Color",
+        "default": "#AB572D"
+      },
+      {
+        "type": "color",
+        "id": "hover_btn_bg_color",
+        "label": "Hover Button BG Color",
+        "default": "#fff"
       },
       {
         "type":"header",
