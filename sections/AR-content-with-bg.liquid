@@ -61,6 +61,9 @@
 }
 </style> 
 {%- style -%}
+#ar_content_with_bg-{{ section.id }} .content_inner {
+  max-width: {{ section.settings.max-with }}px;
+}
 #ar_content_with_bg-{{ section.id }} h2 {
   color: {{ section.settings.headline_color }};
 }
