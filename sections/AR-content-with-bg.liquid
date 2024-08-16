@@ -264,7 +264,11 @@
 </style> 
 {%- style -%}
 #ar_content_with_bg-{{ section.id }} h2 {
-  color: {{ section.settings.headline_color }}
+  color: {{ section.settings.headline_color }};
+}
+#ar_content_with_bg-{{ section.id }} span.desc,
+#ar_content_with_bg-{{ section.id }} span.desc p {
+  color: {{ section.settings.desc_color }};
 } 
 #ar_content_with_bg-{{ section.id }} {
   padding-top:{{ section.settings.desktop_padding_top }}px;
