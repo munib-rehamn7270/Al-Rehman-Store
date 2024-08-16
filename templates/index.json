@@ -22,7 +22,7 @@
         "btn_text_color": "#fff",
         "btn_bg_color": "#AB572D",
         "hover_btn_text_color": "#AB572D",
-        "hover_btn_bg_color": "#fff",
+        "hover_btn_bg_color": "rgba(0,0,0,0)",
         "desktop_padding_top": 60,
         "desktop_padding_bottom": 60,
         "desktop_margin_top": 0,
