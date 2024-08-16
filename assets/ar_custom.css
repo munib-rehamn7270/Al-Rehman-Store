@@ -8,6 +8,9 @@
 
 
 /* Header Styling Starting  */
+.ar_header .scrolled-past-header {
+  
+}
 .ar_header .header__menu-item span {
     font-size: 16px;
     font-weight: 500; 
