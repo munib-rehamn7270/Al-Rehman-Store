@@ -33,6 +33,30 @@
         "mbl_margin_bottom": 0
       }
     },
+    "ar_content_with_bg_GVQRwL": {
+      "type": "AR-content-with-bg",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/wcwsc_1.png",
+        "headline": "Welcome to Local Face",
+        "desc": "<p>Welcome to Local Face Perfumes, where the spirit of victory and triumph come alive through scents that empower and inspire. Our curated collection, aptly named 'Victory Scented,' is a celebration of success and elegance, designed to unleash your victorious essence. Indulge in the sweet taste of triumph with captivating fragrances that tell the tale of your achievements. At Local Face, we believe that every victory deserves a signature scent, and we are dedicated to providing unforgettable fragrances that elevate your spirit and empower your journey.<\/p>",
+        "btn_text": "",
+        "btn_url": "",
+        "headline_color": "#fff",
+        "desc_color": "#fff",
+        "btn_text_color": "#fff",
+        "btn_bg_color": "#AB572D",
+        "hover_btn_text_color": "#AB572D",
+        "hover_btn_bg_color": "#fff",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "desktop_margin_top": 0,
+        "desktop_margin_bottom": 0,
+        "mbl_padding_top": 0,
+        "mbl_padding_bottom": 0,
+        "mbl_margin_top": 0,
+        "mbl_margin_bottom": 0
+      }
+    },
     "image_with_text_U4hYEA": {
       "type": "image-with-text",
       "blocks": {
@@ -74,6 +98,7 @@
   },
   "order": [
     "ar_hero_banner_JJXagd",
+    "ar_content_with_bg_GVQRwL",
     "image_with_text_U4hYEA"
   ]
 }
