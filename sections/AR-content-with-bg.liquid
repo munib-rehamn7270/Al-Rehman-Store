@@ -335,40 +335,10 @@
         </div>
     </div> 
 </section>
-<script>
-window.onload = () => {
-    let sliderImagesBox = document.querySelectorAll(".mm--cards-inner");
-    sliderImagesBox.forEach((el) => {
-        let imageNodes = el.querySelectorAll(".mm--card-col:not(.hide)");
-        let arrIndexes = [];
-        (() => {
-            let start = 0;
-            while (imageNodes.length > start) {
-                arrIndexes.push(start++);
-            }
-        })();
-        let setIndex = (arr) => {
-            for (let i = 0; i < imageNodes.length; i++) {
-                imageNodes[i].dataset.slide = arr[i]; 
-            }
-        };
-        const nextSlide = () => {
-            arrIndexes.unshift(arrIndexes.pop());
-            setIndex(arrIndexes);
-        };
-        const prevSlide = () => {
-            arrIndexes.push(arrIndexes.shift());
-            setIndex(arrIndexes);
-        };
-        el.parentNode.querySelector(".next").addEventListener("click", nextSlide);
-        el.parentNode.querySelector(".prev").addEventListener("click", prevSlide);
-        setIndex(arrIndexes);
-    });
-};
-</script>
+                          
 {% schema %}
   {
-    "name": "MM Cards Slider",
+    "name": "AR Content With BG",
     "settings": [
       {
         "type": "image_picker", 
@@ -488,7 +458,7 @@ window.onload = () => {
     ],
     "presets": [
       {
-        "name": "MM Cards Slider" 
+        "name": "AR Content With BG" 
       }
     ]
   }
