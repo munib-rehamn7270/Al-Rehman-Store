@@ -61,6 +61,10 @@
 }
 </style> 
 {%- style -%}
+#ar_content_with_bg-{{ section.id }} .overlay {
+  opacity:{{ section.settings.overly_opacity }};
+  background-color:{{ section.settings.overly_color }};
+}
 #ar_content_with_bg-{{ section.id }} .content_inner {
   max-width: {{ section.settings.max-with }}px;
 }
