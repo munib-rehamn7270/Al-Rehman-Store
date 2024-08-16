@@ -9,7 +9,7 @@
 
 /* Header Styling Starting  */
 .ar_header .scrolled-past-header .header.page-width {
-  
+  max-width: 100%;
 }
 .ar_header .header__menu-item span {
     font-size: 16px;
