@@ -60,19 +60,19 @@ display: unset;
   margin: 0;
   padding-bottom: 20px;
 }
-.footer-block__desc {
+.ar_custom_footer .footer-block__desc {
   display: block;
   padding-bottom: 28px;
 }
-.footer-block__desc,
-.footer-block__desc p {
+.ar_custom_footer .footer-block__desc,
+.ar_custom_footer .footer-block__desc p { 
   margin: 0;
   color: #FFF;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
 }
-.footer__blocks-wrapper h2.footer-block__heading.inline-richtext {
+.ar_custom_footer .footer__blocks-wrapper h2.footer-block__heading.inline-richtext {
   color: #FFF;
   font-size: 16px;
   font-weight: 600;
@@ -80,7 +80,7 @@ display: unset;
   margin: 0;
   padding-bottom: 10px;
 }
-.link--text {
+.ar_custom_footer .footer__blocks-wrapper .link--text {
   color: #FFF;
   font-size: 16px;
   font-weight: 300;
