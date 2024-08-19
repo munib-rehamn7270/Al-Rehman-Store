@@ -4,7 +4,6 @@
     padding: 0 24px; 
 }
 
-
 /* Header Styling Starting  */
 .ar_header .header__menu-item span {
     font-size: 16px;
@@ -15,14 +14,15 @@
 .ar_header  .header__active-menu-item { 
     text-decoration: none; 
 }
-
  /* Header Styling End  */
 
 
+
+/* AR Feature Collection Styling Starting  */
 .ar_featured_collection {
   
 }
-
+/* AR Feature Collection Styling Starting  */
 
 
 
