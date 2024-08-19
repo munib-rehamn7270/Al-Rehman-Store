@@ -137,7 +137,7 @@
           "settings": {
             "image-size": "small",
             "collection": "frontpage",
-            "img_overly": 0.3
+            "img_overly": 0.5
           }
         },
         "card_GNhNRF": {
@@ -153,7 +153,7 @@
           "settings": {
             "image-size": "small",
             "collection": "modern-classics-collection",
-            "img_overly": 0.3
+            "img_overly": 0.6
           }
         }
       },
