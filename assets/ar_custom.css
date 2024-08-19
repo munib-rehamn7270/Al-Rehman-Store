@@ -105,8 +105,8 @@ display: unset;
 .ar_custom_footer .field:before {
   display: none;
 }
-.field__input:focus,
-.field__input:focus-visible {
+.ar_custom_footer .field__input:focus,
+.ar_custom_footer .field__input:focus-visible {
   box-shadow: none;
   border: 1px solid wheat;
 }
