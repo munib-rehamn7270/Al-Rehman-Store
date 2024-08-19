@@ -49,6 +49,11 @@
 }
 .ar_featured_collection .price {
   text-align: center;
+  color: #AB572D;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 /* AR Feature Collection Styling Starting  */
 
