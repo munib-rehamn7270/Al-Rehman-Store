@@ -115,3 +115,10 @@ display: unset;
   box-shadow: none;
   border: 1px solid wheat;
 }
+.ar_custom_footer .field__label {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
