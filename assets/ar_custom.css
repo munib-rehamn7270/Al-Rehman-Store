@@ -101,6 +101,7 @@ display: unset;
   display: flex;
   padding: 0 24px;
 }
-.ar_custom_footer .field:after {
-  border-radius: 30px;
+.ar_custom_footer .field:after,
+.ar_custom_footer .field:before {
+  display: none;
 }
