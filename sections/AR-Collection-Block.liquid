@@ -97,6 +97,16 @@
   width: calc(50% - 15px);
 }
 }
+@media screen and (max-width: 767px) {
+.ar_collection_block .block__col,
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(1), 
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(2),
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(5),
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(6),
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(7) {
+  width: 100%;
+}
+}
 </style>
 {% style %}
  {% for block in section.blocks %}
