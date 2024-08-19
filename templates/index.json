@@ -139,6 +139,22 @@
             "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
             "img_overly": 0.3
           }
+        },
+        "card_kPdxL8": {
+          "type": "card",
+          "settings": {
+            "image-size": "medium",
+            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
+            "img_overly": 0.3
+          }
+        },
+        "card_j9qTVp": {
+          "type": "card",
+          "settings": {
+            "image-size": "medium",
+            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
+            "img_overly": 0.3
+          }
         }
       },
       "block_order": [
@@ -146,7 +162,9 @@
         "card_Lym8Rq",
         "card_gB99Xn",
         "card_bAnezJ",
-        "card_PEHqjR"
+        "card_PEHqjR",
+        "card_kPdxL8",
+        "card_j9qTVp"
       ],
       "settings": {
         "heading": "Our Collections",
