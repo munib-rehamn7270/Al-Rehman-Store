@@ -55,6 +55,10 @@ display: unset;
   margin: 0;
   padding-bottom: 20px;
 }
+.footer-block__desc {
+  display: block;
+  padding-bottom: 28px;
+}
 .footer-block__desc,
 .footer-block__desc p {
   margin: 0;
