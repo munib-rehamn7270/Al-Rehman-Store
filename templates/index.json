@@ -170,12 +170,12 @@
         "heading": "Our Collections",
         "bg_color": "#000",
         "font_color": "#ab572d",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
+        "desktop_padding_top": 45,
+        "desktop_padding_bottom": 65,
         "desktop_margin_top": 0,
         "desktop_margin_bottom": 0,
-        "mbl_padding_top": 0,
-        "mbl_padding_bottom": 0,
+        "mbl_padding_top": 30,
+        "mbl_padding_bottom": 30,
         "mbl_margin_top": 0,
         "mbl_margin_bottom": 0
       }
