@@ -97,12 +97,13 @@
       <div class="cl_cards_wrapper">
         {% for block in section.blocks %}
             <div class="block__col" id="block__col-{{ block.id }}"> 
-              {% if block.settings.image != blank %}
                 <div class="block_image">
                   {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy' }}
                   <div class="overlay"></div>
                 </div>
-              {% endif %}
+                <div class="block_content">
+                  <h2>jnlkm.fsdmvoim</h2>
+                </div>
             </div> 
         {% endfor %}
     </div>
