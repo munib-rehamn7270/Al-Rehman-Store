@@ -49,7 +49,8 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="page-width">
+        <div class="footer__content-top">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -78,7 +79,7 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
-
+    
                 {%- case block.type -%}
                   {%- when '@app' -%}
                     {% render block %}
@@ -256,8 +257,8 @@
                 {%- endif -%}
               </div>
             </div>
-
-        </div> 
+         </div> 
+      </div>
     {%- endunless -%}
   {%- endif -%}
 
