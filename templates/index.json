@@ -27,7 +27,7 @@
         "desktop_padding_bottom": 30,
         "desktop_margin_top": 0,
         "desktop_margin_bottom": 0,
-        "mbl_padding_top": 20,
+        "mbl_padding_top": 30,
         "mbl_padding_bottom": 30,
         "mbl_margin_top": 0,
         "mbl_margin_bottom": 0
@@ -179,12 +179,38 @@
         "mbl_margin_top": 0,
         "mbl_margin_bottom": 0
       }
+    },
+    "ar_content_with_bg_hK9wyy": {
+      "type": "AR-content-with-bg",
+      "settings": {
+        "headline": "Perfume Year-End Sale! Up to 50% OFF",
+        "desc": "<p>Discover an exquisite collection of premium perfumes at unbelievable prices during our exclusive Perfume Sale!<\/p>",
+        "btn_text": "Know More",
+        "btn_url": "",
+        "overly_opacity": 0.1,
+        "overly_color": "#000",
+        "headline_color": "#fff",
+        "desc_color": "#fff",
+        "btn_text_color": "#fff",
+        "btn_bg_color": "#AB572D",
+        "hover_btn_text_color": "#AB572D",
+        "hover_btn_bg_color": "#fff",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "desktop_margin_top": 0,
+        "desktop_margin_bottom": 0,
+        "mbl_padding_top": 0,
+        "mbl_padding_bottom": 0,
+        "mbl_margin_top": 0,
+        "mbl_margin_bottom": 0
+      }
     }
   },
   "order": [
     "ar_hero_banner_JJXagd",
     "ar_content_with_bg_GVQRwL",
     "image_with_text_U4hYEA",
-    "ar_collection_block_zx8Qhj"
+    "ar_collection_block_zx8Qhj",
+    "ar_content_with_bg_hK9wyy"
   ]
 }
