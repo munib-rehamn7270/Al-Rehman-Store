@@ -116,8 +116,7 @@ h3 {
             <div class="block__col" id="block__col-{{ block.id }}"> 
                 {% assign colitem = collections[block.settings.collection] %}
                 <div class="block_image">
-                  <img src="{{ colitem.image.src | img_url: 'medium' }}" alt="">
-                
+                  {{ colitem.image | image_url: width: colitem.image.width | image_tag: loading: 'lazy' }}
                   <div class="overlay"></div>
                 </div>
                 <div class="block_content">
