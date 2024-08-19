@@ -88,6 +88,10 @@ display: unset;
   margin: 0;
   padding-bottom: 10px;
 }
+.ar_custom_footer .list-social {
+  justify-content: flex-start;
+  padding-top: 28px;
+}
 .ar_custom_footer .footer__content-bottom-wrapper {
   display: flex;
   width: 100%;
