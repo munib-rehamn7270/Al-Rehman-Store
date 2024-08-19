@@ -1,9 +1,9 @@
 <style>
-.cl_cards_layout {
+.ar_collection_block {
   width: 100%;
   height: auto;
 }
-.cl_cards_layout h2 {
+.ar_collection_block h2 {
   color: #AB572D;
   text-align: center;
   font-size: 50px;
@@ -11,31 +11,31 @@
   line-height: normal;
   margin: 0 0 55px 0;
 }
-.cl_cards_layout .cl_cards_wrapper {
+.ar_collection_block .collection_block_wrapper {
   display: flex;
   row-gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.cl_cards_layout .block__col {
+.ar_collection_block .block__col {
   position: relative;
   width: calc(50% - 22px);
   height: 460px;
 }
-.cl_cards_layout .cl_cards_wrapper .block__col:nth-child(1) {
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(1) {
   width: calc(35% - 22px);
 }
-.cl_cards_layout .cl_cards_wrapper .block__col:nth-child(2) {
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(2) {
   width: calc(65% - 22px);
 }
-.cl_cards_layout .cl_cards_wrapper .block__col:nth-child(5) {
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(5) {
   width: calc(26% - 22px);
 }
-.cl_cards_layout .cl_cards_wrapper .block__col:nth-child(6),
-.cl_cards_layout .cl_cards_wrapper .block__col:nth-child(7) {
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(6),
+.ar_collection_block .collection_block_wrapper .block__col:nth-child(7) {
   width: calc(37% - 22px);
 }
-.cl_cards_layout .block_image {
+.ar_collection_block .block_image {
   width: 100%;
   height: 100%;
   position: relative;
@@ -54,13 +54,13 @@
   align-items: center;
   opacity: 0.2;
 }
-.cl_cards_layout img {
+.ar_collection_block img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.cl_cards_layout .block_content {
+.ar_collection_block .block_content {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,14 +72,14 @@
   text-decoration: none;
   transition: 0.4s ease-in-out;
 }
-.cl_cards_layout .block_content:hover {
+.ar_collection_block .block_content:hover {
   background-color: #ab572d52;
 }
-.cl_cards_layout .block_content:hover h3 {
+.ar_collection_block .block_content:hover h3 {
   font-size: 25px; 
   color: #ffdfd0;
 }
-.cl_cards_layout h3 {
+.ar_collection_block h3 {
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
@@ -95,10 +95,10 @@
   }
 {% endfor %}
 
-  #cl_cards_layout-{{ section.id }} h2 {
+  #ar_collection_block-{{ section.id }} h2 {
     color:{{ section.settings.font_color }}; 
   }
-  #cl_cards_layout-{{ section.id }} {
+  #ar_collection_block-{{ section.id }} {
     background-color:{{ section.settings.bg_color }};
     padding-top:{{ section.settings.desktop_padding_top }}px;
     padding-bottom:{{ section.settings.desktop_padding_bottom }}px;
@@ -107,7 +107,7 @@
   }
   @media screen and (max-width: 991px) { 
 
-#cl_cards_layout-{{ section.id }} {
+#ar_collection_block-{{ section.id }} {
   padding-top:{{ section.settings.mbl_padding_top }}px;
   padding-bottom:{{ section.settings.mbl_padding_bottom }}px;
   margin-top:{{ section.settings.mbl_margin_top }}px;
@@ -116,12 +116,12 @@
   }
 {% endstyle %}
 
-<section class="cl_cards_layout" id="cl_cards_layout-{{ section.id }}">
+<section class="ar_collection_block" id="ar_collection_block-{{ section.id }}">
   <div class="page-width">
         {% if section.settings.heading != blank %}
           <h2>{{ section.settings.heading }}</h2>
         {% endif %}
-      <div class="cl_cards_wrapper">
+      <div class="collection_block_wrapper">
         {% for block in section.blocks %}
             <div class="block__col" id="block__col-{{ block.id }}"> 
                 {% assign colitem = collections[block.settings.collection] %}
