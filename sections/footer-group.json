@@ -51,8 +51,11 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
+        "logo_type": "image",
+        "logo_text": "Local Face",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to Our Newsletter:",
+        "newsletter_desc": "<p>Receive Updates on New Arrivals and Special Promotions!<\/p>",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
