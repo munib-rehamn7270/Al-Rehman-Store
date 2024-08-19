@@ -4,31 +4,12 @@
   height: auto;
 }
 .cl_cards_layout h2 {
-  font-family: 'Avenir';
-  font-size: 36px;
+  color: #AB572D;
+  text-align: center;
+  font-size: 50px;
   font-weight: 500;
-  line-height: 40px;
-  position: relative;
-  z-index: 2;
-  margin: 0 0 60px 0;
-}
-.cl_cards_layout h2:before {
-  content: '';
-  background: #74bafb;
-  width: 114px;
-  height: 8px;
-  position: absolute;
-  border-radius: 50px;
-  bottom: 5px;
-  left: 2px;
-  z-index: -1;
-}
-.cl_cards_layout .headline span {
-  border: 3px solid #74bafb;
-  width: 115px;
-  display: block;
-  height: 0px;
-  border-radius: 10px;
+  line-height: normal;
+  margin: 0 0 55px 0;
 }
 .cl_cards_layout .cl_cards_wrapper {
   display: flex;
@@ -78,68 +59,6 @@
   border-radius: 16px;
   display: block;
 }
-.cl_cards_layout .block_text {
-  position: absolute;
-  top: 0;
-  padding: 32px 40px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  transition: 0.3s ease-in-out;
-  z-index: 3;
-}
-.cl_cards_layout .block_text:before {
-  transition: opacity 0.3s ease-in-out;
-  content: '';
-  background: #59aefb;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  border-radius: 16px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-.cl_cards_layout .block_text:hover:before {
-  opacity: 0.5;
-}
-.cl_cards_layout .block_text:hover {
-  align-items: center;
-  justify-content: center;
-}
-.cl_cards_layout .block_text:hover span.desc {
-  display: none;
-}
-.cl_cards_layout .block_text:hover .card_btn {
-  display: flex !important;
-  align-items: center;
-  gap: 8px;
-}
-.cl_cards_layout span.desc {
-  display: block;
-  max-width: 220px;
-}
-.cl_cards_layout span.desc,
-.cl_cards_layout span.desc p {
-  font-family: 'Avenir';
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 120%;
-  margin: 0;
-}
-.cl_cards_layout .card_btn {
-  display: none !important;
-  color: #000433;
-  font-family: 'Avenir';
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 120%;
-  text-decoration: none;
-   transition: 0.5s ease-in-out;
-}
 @media screen and (max-width: 991px) {
 .cl_cards_layout .cl_cards_wrapper {
   display: grid !important;
@@ -160,18 +79,8 @@
   height: 500px;
   margin: 0;
 }
-.cl_cards_layout span.desc, 
-.cl_cards_layout span.desc p {
-  font-size: 30px;
-  line-height: 36px;
-}
 }
 @media screen and (max-width: 580px) {
-.cl_cards_layout h2 {
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 30px;
-}
  .cl_cards_layout .cl_cards_wrapper {
   grid-template-columns: 1fr;
 } 
