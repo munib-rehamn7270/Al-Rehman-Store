@@ -183,6 +183,7 @@
     "ar_content_with_bg_hK9wyy": {
       "type": "AR-content-with-bg",
       "settings": {
+        "bg_image": "shopify:\/\/shop_images\/pexels-guillaume-pierre-leroy-11417443_2.png",
         "headline": "Perfume Year-End Sale! Up to 50% OFF",
         "desc": "<p>Discover an exquisite collection of premium perfumes at unbelievable prices during our exclusive Perfume Sale!<\/p>",
         "btn_text": "Know More",
