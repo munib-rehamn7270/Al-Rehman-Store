@@ -19,9 +19,16 @@
 
 
 /* AR Feature Collection Styling Starting  */
-.ar_featured_collection {
-  
+.ar_featured_collection h2.title {
+  color: #AB572D;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
 }
+
+
 /* AR Feature Collection Styling Starting  */
 
 
