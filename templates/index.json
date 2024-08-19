@@ -100,80 +100,71 @@
     "ar_collection_block_zx8Qhj": {
       "type": "AR-Collection-Block",
       "blocks": {
-        "card_9MQXAT": {
+        "card_fCncMK": {
           "type": "card",
           "settings": {
             "image-size": "small",
-            "image": "shopify:\/\/shop_images\/wcwsc_1.png",
+            "collection": "designer-delights-collection",
             "img_overly": 0.3
           }
         },
-        "card_Lym8Rq": {
-          "type": "card",
-          "settings": {
-            "image-size": "large",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
-            "img_overly": 0.3
-          }
-        },
-        "card_gB99Xn": {
-          "type": "card",
-          "settings": {
-            "image-size": "medium",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
-            "img_overly": 0.3
-          }
-        },
-        "card_bAnezJ": {
-          "type": "card",
-          "settings": {
-            "image-size": "medium",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
-            "img_overly": 0.3
-          }
-        },
-        "card_PEHqjR": {
+        "card_mn6wq8": {
           "type": "card",
           "settings": {
             "image-size": "small",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
+            "collection": "travel-essentials-collection",
             "img_overly": 0.3
           }
         },
-        "card_kPdxL8": {
-          "type": "card",
-          "settings": {
-            "image-size": "medium",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
-            "img_overly": 0.3
-          }
-        },
-        "card_j9qTVp": {
-          "type": "card",
-          "settings": {
-            "image-size": "medium",
-            "image": "shopify:\/\/shop_images\/megaerica_Carbonated_perfume_in_a_bottle_6a49a0c4-198a-4f33-a2d6-a0c8eee0c9d8ddef_1.png",
-            "img_overly": 0.3
-          }
-        },
-        "card_6r9wWr": {
+        "card_hidxTz": {
           "type": "card",
           "settings": {
             "image-size": "small",
-            "image": "shopify:\/\/shop_images\/wcwsc_1.png",
+            "collection": "special-occasions-collection",
+            "img_overly": 0.3
+          }
+        },
+        "card_dtH6na": {
+          "type": "card",
+          "settings": {
+            "image-size": "small",
+            "collection": "seasonal-sensations-collection",
+            "img_overly": 0.3
+          }
+        },
+        "card_RBxN3n": {
+          "type": "card",
+          "settings": {
+            "image-size": "small",
+            "collection": "frontpage",
+            "img_overly": 0.3
+          }
+        },
+        "card_GNhNRF": {
+          "type": "card",
+          "settings": {
+            "image-size": "small",
+            "collection": "limited-edition-treasures",
+            "img_overly": 0.3
+          }
+        },
+        "card_apYdC9": {
+          "type": "card",
+          "settings": {
+            "image-size": "small",
+            "collection": "modern-classics-collection",
             "img_overly": 0.3
           }
         }
       },
       "block_order": [
-        "card_9MQXAT",
-        "card_Lym8Rq",
-        "card_gB99Xn",
-        "card_bAnezJ",
-        "card_PEHqjR",
-        "card_kPdxL8",
-        "card_j9qTVp",
-        "card_6r9wWr"
+        "card_fCncMK",
+        "card_mn6wq8",
+        "card_hidxTz",
+        "card_dtH6na",
+        "card_RBxN3n",
+        "card_GNhNRF",
+        "card_apYdC9"
       ],
       "settings": {
         "heading": "Our Collections",
