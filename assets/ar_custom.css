@@ -37,5 +37,14 @@
 .ar_custom_footer .footer-block--newsletter {
   display: unset;
 }
-
+.ar_custom_footer  h3.logo_heading {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: normal;
+    background: linear-gradient(to bottom right, #AB572D 0%, #EC9A52 22%, #A5470F 50%, #AB5829 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #AB572D 0%, #EC9A52 22%, #A5470F 50%, #AB5829 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #AB572D 0%, #EC9A52 22%, #A5470F 50%, #AB5829 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #AB572D 0%, #EC9A52 22%, #A5470F 50%, #AB5829 50%) top right / 50% 50% no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding-bottom: 28px;
+}
 
