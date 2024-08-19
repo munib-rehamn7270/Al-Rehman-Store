@@ -47,6 +47,9 @@
   line-height: normal;
   text-align: center;
 }
+.ar_featured_collection .price {
+  text-align: center;
+}
 /* AR Feature Collection Styling Starting  */
 
 
