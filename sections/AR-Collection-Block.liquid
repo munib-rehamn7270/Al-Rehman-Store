@@ -199,22 +199,9 @@
 </style>
 {% style %}
  {% for block in section.blocks %}
-#block__col-{{ block.id }}  .block_image .overlay {
-   opacity:{{ block.settings.img_overly }}; 
-}
-#block__col-{{ block.id }} span.desc,
-#block__col-{{ block.id }} span.desc p {
-  color:{{ block.settings.heading_color }}; 
-}
-#block__col-{{ block.id }} .card_btn {
-  color:{{ block.settings.btn_text_color }}; 
-}
-#block__col-{{ block.id }} .card_btn {
-  color:{{ block.settings.btn_text_color }}; 
-}
-#block__col-{{ block.id }}  .block_text:hover:before {
- background-color:{{ block.settings.hover_bg_color }}; 
-}
+  #block__col-{{ block.id }}  .block_image .overlay {
+     opacity:{{ block.settings.img_overly }}; 
+  }
 {% endfor %}
 
   #cl_cards_layout-{{ section.id }} h2 {
