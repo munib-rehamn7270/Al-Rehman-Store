@@ -51,7 +51,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "logo_type": "image",
+        "logo_type": "text",
         "logo_text": "Local Face",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to Our Newsletter:",
