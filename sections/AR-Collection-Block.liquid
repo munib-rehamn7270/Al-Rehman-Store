@@ -115,7 +115,7 @@ h3 {
         {% for block in section.blocks %}
             <div class="block__col" id="block__col-{{ block.id }}"> 
                 {% assign colitem = collections[block.settings.collection] %}
-                {% if block.settings.image != blank %}
+                {% if colitem.image != blank %}
                   <div class="block_image">
                     {{ colitem.image | image_url: width: colitem.image.width | image_tag: loading: 'lazy' }}
                     <div class="overlay"></div>
