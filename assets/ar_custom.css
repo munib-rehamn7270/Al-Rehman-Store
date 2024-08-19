@@ -122,3 +122,6 @@ display: unset;
   line-height: normal;
   margin: 0;
 }
+.ar_custom_footer .newsletter-form__button .icon {
+    width: 24px;
+}
