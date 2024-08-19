@@ -49,6 +49,8 @@
 }
 .ar_featured_collection .price {
   text-align: center;
+}
+.ar_featured_collection .price__container {
   color: #AB572D;
   font-size: 16px;
   font-style: normal;
