@@ -97,9 +97,9 @@
       <div class="cl_cards_wrapper">
         {% for block in section.blocks %}
             <div class="block__col" id="block__col-{{ block.id }}"> 
-                {% assign col = collections[block.settings.collection] %}
+                {% assign colitem = collections[block.settings.collection] %}
                 <div class="block_image">
-                  {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy' }}
+                  {{ colitem.image | image_url: width: colitem.image.width | image_tag: loading: 'lazy' }}
                   <div class="overlay"></div>
                 </div>
                 <div class="block_content">
