@@ -28,7 +28,8 @@
   align-items: center;
 }
 .ar_custom_footer .footer__content-top .grid {
-
+  max-width: 736px;
+  width: 100%;
 }
 .ar_custom_footer .footer_left_content {
   max-width: 390px;
