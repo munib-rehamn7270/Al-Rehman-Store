@@ -113,5 +113,5 @@ display: unset;
 .ar_custom_footer .field__input:focus,
 .ar_custom_footer .field__input:focus-visible {
   box-shadow: none;
-  border: 2px solid wheat;
+  border: 1px solid wheat;
 }
