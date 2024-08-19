@@ -25,6 +25,7 @@
 .ar_custom_footer .footer__content-top { 
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 .ar_custom_footer .footer__content-top .grid,
 .ar_custom_footer .footer_left_content {
