@@ -159,9 +159,19 @@
           </div>
         {%- endif -%}
         <div class="footer_left_content">
-          {% if section.settings.footer_logo != blank %} 
-            
-          {% endif %}
+             <div class="footer_logo">
+              {% if block.settings.logo_type == 'image' %}
+                <div class="banner_img">
+                  {% if section.settings.logo_image != blank %}
+                    {{  section.settings.logo_image | image_url: width: section.settings.logo_image.width | image_tag: loading: 'lazy'}}
+                  {% endif %}
+                </div>
+              {% else %}
+                {% if section.settings.logo_text != blank %} 
+                  <h3 class="logo_heading">{{ section.settings.logo_text }}</h3>
+                {% endif %}
+              {% endif %}
+            </div>
           <div class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -440,6 +450,16 @@
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
       "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "select",
+      "id": "logo_type",
+      "label": "Logo Type",
+      "options": [
+        {"value": "image", "label": "Image"},
+        {"value": "text", "label": "Text"}
+      ],
+      "default": "text"
     },
     {
       "type": "checkbox",
