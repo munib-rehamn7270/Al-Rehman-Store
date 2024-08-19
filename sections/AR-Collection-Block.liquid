@@ -271,7 +271,7 @@
 </section>
 {% schema %}
 {
-  "name": "Cl Cards Layout",
+  "name": "AR Collection Block",
   "settings": [
     {
       "type": "text",
@@ -287,11 +287,11 @@
       "type": "color",
       "id": "bg_color",
       "label": "BG Color",
-      "default": "#fff"
+      "default": "#000"
     },
     {
       "type": "color",
-      "id": "font1_color",
+      "id": "font_color",
       "label": "Main Heading Color",
       "default": "#000433"
     },
@@ -410,11 +410,6 @@
           "default": "small"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
           "type": "range",
           "id": "img_overly",
           "min": 0,
@@ -423,48 +418,13 @@
           "unit": "px",
           "label": "Image Overly",
           "default": 0.3
-        },
-        {
-          "type": "richtext",
-          "id": "desc",
-          "label": "Heading",
-          "default": "<p>Vaccinations Prevent Infections</p>"
-        },
-        {
-          "type": "text",
-          "id": "btn_text",
-          "label": "Hover Button Text",
-          "default": "Explore more"
-        },
-        {
-          "type": "url",
-          "id": "btn_link",
-          "label": "Hover Button Url"
-        },
-        {
-          "type": "color",
-          "id": "heading_color",
-          "label": "Heading Color",
-          "default": "#000433"
-        },
-        {
-          "type": "color",
-          "id": "btn_text_color",
-          "label": "Button Text Color",
-          "default": "#000433"
-        },
-        {
-          "type": "color",
-          "id": "hover_bg_color",
-          "label": "Hover Bg Color",
-          "default": "#fff"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "CL Card Layout"
+      "name": "AR Collection Block"
     }
   ]
 }
