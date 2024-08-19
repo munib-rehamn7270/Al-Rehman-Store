@@ -32,3 +32,6 @@
 .ar_custom_footer .list-social {
     justify-content: flex-start;
 }
+.footer-block--newsletter {
+  display: unset;
+}
