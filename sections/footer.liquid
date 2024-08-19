@@ -161,7 +161,7 @@
         <div class="footer_left_content">
              <div class="footer_logo">
               {% if block.settings.logo_type == 'image' %}
-                <div class="banner_img">
+                <div class="logo_img">
                   {% if section.settings.logo_image != blank %}
                     {{  section.settings.logo_image | image_url: width: section.settings.logo_image.width | image_tag: loading: 'lazy'}}
                   {% endif %}
@@ -460,6 +460,17 @@
         {"value": "text", "label": "Text"}
       ],
       "default": "text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_imgage",
+      "label": "Logo Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "logo_text",
+      "default": "Local Face",
+      "label": "Logo Text"
     },
     {
       "type": "checkbox",
