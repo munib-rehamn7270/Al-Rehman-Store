@@ -160,7 +160,7 @@
         {%- endif -%}
         <div class="footer_left_content">
              <div class="footer_logo">
-              {% if block.settings.logo_type == 'image' %}
+              {% if section.settings.logo_type == 'image' %}
                 <div class="logo_img">
                   {% if section.settings.logo_image != blank %}
                     {{  section.settings.logo_image | image_url: width: section.settings.logo_image.width | image_tag: loading: 'lazy'}}
