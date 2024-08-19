@@ -1,6 +1,471 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+.cl_cards_layout {
+  width: 100%;
+  height: auto;
+}
+.cl_cards_layout h2 {
+  font-family: 'Avenir';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  position: relative;
+  z-index: 2;
+  margin: 0 0 60px 0;
+}
+.cl_cards_layout h2:before {
+  content: '';
+  background: #74bafb;
+  width: 114px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50px;
+  bottom: 5px;
+  left: 2px;
+  z-index: -1;
+}
+.cl_cards_layout .headline span {
+  border: 3px solid #74bafb;
+  width: 115px;
+  display: block;
+  height: 0px;
+  border-radius: 10px;
+}
+.cl_cards_layout .cl_cards_wrapper {
+  display: flex;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+.cl_cards_layout .block__col, 
+.cl_cards_layout .block__large, 
+.cl_cards_layout .block__medium {
+  position: relative;
+  max-width: calc(33.3% - 40px);
+  height: 625px;
+  width: 100%;
+  margin: 0 20px;
+}
+.cl_cards_layout .block__medium {
+  max-width: calc(44% - 40px);
+}
+.cl_cards_layout .block__large {
+  max-width: calc(56% - 40px);
+}
+.cl_cards_layout .block_image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+.block_image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+  border-radius: 16px;
+}
+.cl_cards_layout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.cl_cards_layout .block_text {
+  position: absolute;
+  top: 0;
+  padding: 32px 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.3s ease-in-out;
+  z-index: 3;
+}
+.cl_cards_layout .block_text:before {
+  transition: opacity 0.3s ease-in-out;
+  content: '';
+  background: #59aefb;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.cl_cards_layout .block_text:hover:before {
+  opacity: 0.5;
+}
+.cl_cards_layout .block_text:hover {
+  align-items: center;
+  justify-content: center;
+}
+.cl_cards_layout .block_text:hover span.desc {
+  display: none;
+}
+.cl_cards_layout .block_text:hover .card_btn {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+.cl_cards_layout span.desc {
+  display: block;
+  max-width: 220px;
+}
+.cl_cards_layout span.desc,
+.cl_cards_layout span.desc p {
+  font-family: 'Avenir';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 120%;
+  margin: 0;
+}
+.cl_cards_layout .card_btn {
+  display: none !important;
+  color: #000433;
+  font-family: 'Avenir';
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 120%;
+  text-decoration: none;
+   transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 991px) {
+.cl_cards_layout .cl_cards_wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 0 !important;
+}
+.cl_cards_layout .block__large {
+  max-width: 100%;
+}
+.cl_cards_layout .block__medium {
+  max-width: 100%;
+}
+.cl_cards_layout .block__col, 
+.cl_cards_layout .block__large, 
+.cl_cards_layout .block__medium {
+  max-width: 100%;
+  height: 500px;
+  margin: 0;
+}
+.cl_cards_layout span.desc, 
+.cl_cards_layout span.desc p {
+  font-size: 30px;
+  line-height: 36px;
+}
+}
+@media screen and (max-width: 580px) {
+.cl_cards_layout h2 {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+.cl_cards_layout h2:before {
+  width: 70px;
+  height: 5px;
+}
+ .cl_cards_layout .cl_cards_wrapper {
+  grid-template-columns: 1fr;
+} 
+.cl_cards_layout .block__col, 
+.cl_cards_layout .block__large, 
+.cl_cards_layout .block__medium {
+  height: 420px;
+}
+.cl_cards_layout .block_text {
+  padding: 20px;
+}
+.cl_cards_layout span.desc, 
+.cl_cards_layout span.desc p {
+  font-family: 'Avenir';
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0;
+}
+}
+</style>
+{% style %}
+ {% for block in section.blocks %}
+#block__col-{{ block.id }}  .block_image .overlay {
+   opacity:{{ block.settings.img_overly }}; 
+}
+#block__col-{{ block.id }} span.desc,
+#block__col-{{ block.id }} span.desc p {
+  color:{{ block.settings.heading_color }}; 
+}
+#block__col-{{ block.id }} .card_btn {
+  color:{{ block.settings.btn_text_color }}; 
+}
+#block__col-{{ block.id }} .card_btn {
+  color:{{ block.settings.btn_text_color }}; 
+}
+#block__col-{{ block.id }}  .block_text:hover:before {
+ background-color:{{ block.settings.hover_bg_color }}; 
+}
+{% endfor %}
+
+  #cl_cards_layout-{{ section.id }} h2 {
+    color:{{ section.settings.font1_color }}; 
   }
+
+  #cl_cards_layout-{{ section.id }} {
+    background-color:{{ section.settings.bg_color }};
+    padding-top:{{ section.settings.desktop_padding_top }}px;
+    padding-bottom:{{ section.settings.desktop_padding_bottom }}px;
+    margin-top:{{ section.settings.desktop_margin_top }}px;
+    margin-bottom:{{ section.settings.desktop_margin_bottom }}px;
+  }
+  @media screen and (max-width: 991px) { 
+
+#cl_cards_layout-{{ section.id }} {
+  padding-top:{{ section.settings.mbl_padding_top }}px;
+  padding-bottom:{{ section.settings.mbl_padding_bottom }}px;
+  margin-top:{{ section.settings.mbl_margin_top }}px;
+  margin-bottom:{{ section.settings.mbl_margin_bottom }}px;
+}
+  }
+{% endstyle %}
+
+<section class="cl_cards_layout" id="cl_cards_layout-{{ section.id }}">
+  <div class="page-width">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+      <div class="cl_cards_wrapper">
+        {% for block in section.blocks %}
+            <div class="{% if block.settings.image-size == 'large' %}block__large{% elsif block.settings.image-size == 'medium'  %}block__medium{% else %}block__col{% endif %}" id="block__col-{{ block.id }}"> 
+              {% if block.settings.image != blank %}
+                <div class="block_image">
+                  {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy' }}
+                  <div class="overlay"></div>
+                </div>
+              {% endif %}
+              <div class="block_text">
+                {% if block.settings.desc != blank %}
+                  <span class="desc">{{ block.settings.desc }}</span>
+                {% endif %}
+                {% if block.settings.btn_text != blank %}
+                  <a href="{{ block.settings.btn_link }}" class="card_btn">{{ block.settings.btn_text }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M1.98584 11.9885C1.98584 11.4365 2.43384 10.9885 2.98584 10.9885H16.9858V6.98853L21.9858 11.9885L16.9858 16.9885V12.9885H2.98584C2.43384 12.9885 1.98584 12.5405 1.98584 11.9885Z" fill="{{ block.settings.btn_text_color }}"/>
+                  </svg></a>
+                {% endif %}
+              </div> 
+            </div> 
+        {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Cl Cards Layout",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The “Why” of Preventive Health"
+    },
+    {
+      "type": "header",
+      "content": "Section Color Setting"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "font1_color",
+      "label": "Main Heading Color",
+      "default": "#000433"
+    },
+    {
+      "type": "header",
+      "content": "Section Desktop Spacing"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Mobile Spacing"
+    },
+    {
+      "type": "range",
+      "id": "mbl_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mbl_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mbl_margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mbl_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "image-size",
+          "label": "Card Width",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "small"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "img_overly",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "unit": "px",
+          "label": "Image Overly",
+          "default": 0.3
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Heading",
+          "default": "<p>Vaccinations Prevent Infections</p>"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Hover Button Text",
+          "default": "Explore more"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Hover Button Url"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#000433"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button Text Color",
+          "default": "#000433"
+        },
+        {
+          "type": "color",
+          "id": "hover_bg_color",
+          "label": "Hover Bg Color",
+          "default": "#fff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CL Card Layout"
+    }
+  ]
+}
 {% endschema %}
